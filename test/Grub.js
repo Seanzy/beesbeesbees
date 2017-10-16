@@ -3,7 +3,7 @@ describe('Grub class functionality', function() {
   verifyClass(Grub).followsPattern('pseudoclassical', {}, false);
 
   beforeEach(function() {
-    grub = new Grub();
+    grub = new Grub(); // delegating grub to Object.create(Grub.prototype) and returning 'this'
   });
 
   it('should have an `age` property that is set to `0`', function() {
